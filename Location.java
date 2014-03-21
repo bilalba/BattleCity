@@ -21,7 +21,7 @@ public class Location {
 	}
 
 	public int findDistance(int r,int c){
-		// implement here
+		return 1;
 	}
 
 	public int getRow(){
@@ -32,6 +32,21 @@ public class Location {
 		return col;
 	}
 
+	public boolean collision(Location l) {
+		if ((row - l.getRow() < 30) && (row -l.getRow() > -30)) {
+			if ((col - l.getCol() < 30) && (col -l.getCol() > -30))
+				return true;
+		}
+		return false;
+	}
+
+	public boolean m_collision(Location l) {
+		if ((row - l.getRow() < 50) && (row -l.getRow() > -50)) {
+			if ((col - l.getCol() < 50) && (col -l.getCol() > -50))
+				return true;
+		}
+		return false;
+	}
 
 
 }
